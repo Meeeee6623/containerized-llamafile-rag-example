@@ -1,13 +1,8 @@
 #!/bin/bash
 
-# Create virtualenv
-if [ ! -d "venv" ]; then
-  pyenv local 3.11
-  python3 -m venv venv
-  source venv/bin/activate
-  pip install --upgrade pip setuptools wheel
-  pip install -r requirements.txt
-fi
+# Install dependencies
+pip install --upgrade pip setuptools wheel
+pip install -r requirements.txt
 
 # Create .env to store app settings (see also settings.py)
 if [ ! -f ".env" ]; then cp -v .env.example .env; fi
