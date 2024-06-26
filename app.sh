@@ -12,6 +12,7 @@ echo "Starting llamafile servers..."
 "models/embedding_model.llamafile" \
 --server \
 --nobrowser \
+--ngl 9999 \
 --port "${EMBEDDING_MODEL_PORT}" > logs/embedding_model.log 2>&1 &
 pid=$!
 sleep 20
@@ -27,6 +28,7 @@ echo "started embedding model"
 "models/generation_model.llamafile" \
 --server \
 --nobrowser \
+--ngl 9999 \
 --port "${GENERATION_MODEL_PORT}" > logs/generation_model.log 2>&1 &
 pid=$!
 sleep 20
