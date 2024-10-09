@@ -120,7 +120,7 @@ def load_index():
 
 def pprint_search_results(scores: np.ndarray, doc_indices: np.ndarray, docs: list[str]):
     print("=== Search Results ===")
-    if doc_indices.size == 0:
+    if len(doc_indices) == 0:
         print("No results found.")
         print()
         return
