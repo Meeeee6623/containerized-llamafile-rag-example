@@ -39,7 +39,7 @@ echo "${pid}" > .pid_generation_model
 echo "started generation model"
 
 # Run RAG app
-python app.py "$@"
+python3 app.py "$@"
 
 # Shut down the llamafiles
 kill "$(cat .pid_embedding_model)"
