@@ -2,7 +2,7 @@
 
 # Load config and virtualenv
 . .env
-if [ -z "${VIRTUAL_ENV}" ]; then source venv/bin/activate; fi
+
 
 mkdir -p logs
 
@@ -39,7 +39,7 @@ echo "${pid}" > .pid_generation_model
 echo "started generation model"
 
 # Run RAG app
-python app.py "$@"
+python3 app.py "$@"
 
 # Shut down the llamafiles
 kill "$(cat .pid_embedding_model)"
