@@ -146,7 +146,10 @@ def run_query(k: int, index: faiss.IndexFlatIP, docs: list[str]):
     emb = embed(query)
     scores, doc_indices = index.search(emb, k)
     pprint_search_results(scores, doc_indices, docs)
-    search_results = [docs[ix] for ix in doc_indices[0]]
+    try:
+        search_results = [docs[ix] for ix in doc_indices[0]]
+    except IndexError:
+        search_results = []
 
     print("=== Prompt ===")
     prompt_template = (
