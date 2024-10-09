@@ -18,7 +18,7 @@ if [ ! -f ".env" ]; then cp -v .env.example .env; fi
 # - models/generation_model.llamafile
 #
 EMBEDDING_MODEL_URL="https://huggingface.co/Mozilla/mxbai-embed-large-v1-llamafile/resolve/main/mxbai-embed-large-v1-f16.llamafile"
-GENERATION_MODEL_URL="https://huggingface.co/Mozilla/Mistral-7B-Instruct-v0.2-llamafile/resolve/main/mistral-7b-instruct-v0.2.Q4_0.llamafile"
+GENERATION_MODEL_URL="https://huggingface.co/Mozilla/Mistral-7B-Instruct-v0.3-llamafile/resolve/main/Mistral-7B-Instruct-v0.3.Q6_K.llamafile"
 
 function url_to_filename() {
   url=$1
