@@ -109,7 +109,7 @@ def build_index():
         index.add(embedding)
         docs.append(text)
 
-    savedir.mkdir(parents=True)
+    savedir.mkdir(parents=True, exist_ok=True)
     faiss.write_index(index, str(savedir / "index.faiss"))
     with open(savedir / "index.json", "w") as fout:
         json.dump(docs, fout)
