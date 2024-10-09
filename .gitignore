@@ -10,4 +10,4 @@ models/
 logs/
 .pid_*
 
-local_data/facet-ii-TD-doc.pdf
+local_data/*
