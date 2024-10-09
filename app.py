@@ -120,9 +120,14 @@ def load_index():
 
 def pprint_search_results(scores: np.ndarray, doc_indices: np.ndarray, docs: list[str]):
     print("=== Search Results ===")
+    if doc_indices.size == 0:
+        print("No results found.")
+        print()
+        return
     for i, doc_ix in enumerate(doc_indices[0]):
         print('%.4f - "%s"' % (scores[0, i], docs[doc_ix][:100]))
     print()
+    return
 
 
 SEP = "-" * 80
