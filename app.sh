@@ -3,7 +3,8 @@
 # Load config and virtualenv
 . .env
 
-mkdir logs
+# make logs dir if it doesn't exist
+mkdir -p logs
 
 # Start llamafiles
 echo "Starting llamafile servers..."
