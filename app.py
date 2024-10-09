@@ -20,7 +20,7 @@ logger = logging.getLogger(__name__)
 
 def load_pdf(path: str) -> str:
     with open(path, "rb") as f:
-        reader = PyPDF2.PdfFileReader(f)
+        reader = PyPDF2.PdfReader(f)
         text = []
 
         for page in reader.pages:
